@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=PT+Sans&family=Work+Sans:wght@400;500&display=swap"
+				rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<title>test</title>
+</head>
+<body>
+<div class="container">
+	<div class="sidebar">
+		<div class="sidebar__title">Sign up</div>
+	</div>
+	<form onsubmit="console.log(); return false;" class="form">
+		<div class="form__title">New user?</div>
+		<div>Use the form below to create your account</div>
+
+		<div class="form__inner">
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation">
+					<div class="form__label">First Name</div>
+					<input name="first-name" type="text" class="form__input" value="Alice" required/>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_300">
+					<div class="form__label">Last Name</div>
+					<input name="last-name" type="text" class="form__input" value="Miller" required/>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_600">
+					<div class="form__label">Nationality</div>
+					<select name="nationality" class="form__input" required>
+						<option selected disabled hidden></option>
+						<option value="american">American</option>
+						<option value="germa">German</option>
+						<option value="italian">Italian</option>
+					</select>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_900">
+					<div class="form__label">E-mail</div>
+					<input name="mail" type="email" class="form__input" required value="alice.miller@yahoo.com"/>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_1200">
+					<div class="form__label">Date of Birth</div>
+					<div class="form__input-inner">
+						<select name="day" class="form__input form__input_day" required></select>
+						<select name="month" class="form__input form__input_month" required></select>
+						<select name="year" class="form__input form__input_year" required></select>
+					</div>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_1500">
+					<div class="form__label">Gender</div>
+					<div class="form__gender">
+						<div class="form__radio-wrapper">
+							<input class="form__input-radio" id="male" name="gender" type="radio" value="male" required/>
+							<label class="form__label-radio" for="male">Male</label>
+						</div>
+
+						<div class="form__radio-wrapper">
+							<input class="form__input-radio" id="female" name="gender" type="radio" value="female" required/>
+							<label class="form__label-radio" for="female">Female</label>
+						</div>
+					</div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_1800">
+					<div class="form__label">Password</div>
+					<input name="password" type="password" minlength="8" required class="form__input"/>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+			<div class="form__input-wrapper">
+				<label class="form__input-animation form__input-animation_delay_2100">
+					<div class="form__label">Confirm Password</div>
+					<input name="confirmPassword" type="password" minlength="8" required class="form__input"/>
+					<div class="error-line"></div>
+				</label>
+			</div>
+
+		</div>
+
+		<div class="flex-grow"></div>
+
+		<div class="form__footer">
+			<div class="form__link">
+				Have an account?
+				<a href="#">Login</a>
+			</div>
+			<input class="form__submit" type="submit" value="Complete Signup"/>
+		</div>
+	</form>
+</div>
+<script defer src="js/main.js"></script>
+</body>
+</html>
