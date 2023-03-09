@@ -13,68 +13,68 @@
 	<title>test</title>
 </head>
 <body>
-<div class="container">
+<form class="form">
 	<div class="sidebar">
 		<div class="sidebar__title">Sign up</div>
 	</div>
-	<form onsubmit="console.log(); return false;" class="form">
+	<div class="form__controls">
 		<div class="form__title">New user?</div>
-		<div>Use the form below to create your account</div>
+		<div class="ddd">Use the form below to create your account</div>
 
 		<div class="form__inner">
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation">
-					<div class="form__label">First Name</div>
-					<input name="first-name" type="text" class="form__input" value="Alice" required/>
+				<div class="form__input-animation">
+					<label class="form__label" for="first-name">First Name</label>
+					<input class="form__input"  id="first-name" name="first-name" type="text" value="Alice" required/>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_300">
-					<div class="form__label">Last Name</div>
-					<input name="last-name" type="text" class="form__input" value="Miller" required/>
+				<div class="form__input-animation form__input-animation_delay_300">
+					<label class="form__label" for="last-name">Last Name</label>
+					<input class="form__input"  id="last-name" name="last-name" type="text" value="Miller" required/>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_600">
-					<div class="form__label">Nationality</div>
-					<select name="nationality" class="form__input" required>
+				<div class="form__input-animation form__input-animation_delay_600">
+					<label class="form__label" for="nationality">Nationality</label>
+					<select class="form__input" id="nationality" name="nationality" required>
 						<option selected disabled hidden></option>
 						<option value="american">American</option>
 						<option value="germa">German</option>
 						<option value="italian">Italian</option>
 					</select>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_900">
-					<div class="form__label">E-mail</div>
-					<input name="mail" type="email" class="form__input" required value="alice.miller@yahoo.com"/>
+				<div class="form__input-animation form__input-animation_delay_900">
+					<label class="form__label" for="mail">E-mail</label>
+					<input class="form__input"  id="mail" name="mail" type="email" required value="alice.miller@yahoo.com"/>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_1200">
-					<div class="form__label">Date of Birth</div>
+				<div class="form__input-animation form__input-animation_delay_1200">
+					<label class="form__label" for="day" id="birthday">Date of Birth</label>
 					<div class="form__input-inner">
-						<select name="day" class="form__input form__input_day" required></select>
-						<select name="month" class="form__input form__input_month" required></select>
-						<select name="year" class="form__input form__input_year" required></select>
+						<select class="form__input form__input_day" id="day" aria-labelledby="birthday" name="day" required></select>
+						<select class="form__input form__input_month" aria-labelledby="birthday"  name="month" required></select>
+						<select class="form__input form__input_year" aria-labelledby="birthday"  name="year" required></select>
 					</div>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_1500">
-					<div class="form__label">Gender</div>
+				<div class="form__input-animation form__input-animation_delay_1500">
+					<label class="form__label">Gender</label>
 					<div class="form__gender">
 						<div class="form__radio-wrapper">
 							<input class="form__input-radio" id="male" name="gender" type="radio" value="male" required/>
@@ -86,23 +86,23 @@
 							<label class="form__label-radio" for="female">Female</label>
 						</div>
 					</div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_1800">
-					<div class="form__label">Password</div>
-					<input name="password" type="password" minlength="8" required class="form__input"/>
+				<div class="form__input-animation form__input-animation_delay_1800">
+					<label class="form__label" for="password">Password</label>
+					<input class="form__input" id="password" name="password" type="password" minlength="8" required/>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 			<div class="form__input-wrapper">
-				<label class="form__input-animation form__input-animation_delay_2100">
-					<div class="form__label">Confirm Password</div>
-					<input name="confirmPassword" type="password" minlength="8" required class="form__input"/>
+				<div class="form__input-animation form__input-animation_delay_2100">
+					<label class="form__label" for="confirm-password">Confirm Password</label>
+					<input class="form__input" id="confirm-password" name="confirmPassword" type="password" minlength="8" required/>
 					<div class="error-line"></div>
-				</label>
+				</div>
 			</div>
 
 		</div>
@@ -114,10 +114,21 @@
 				Have an account?
 				<a href="#">Login</a>
 			</div>
-			<input class="form__submit" type="submit" value="Complete Signup"/>
+			<div id="error">
+				<input class="form__submit" type="submit" value="Complete Signup"/>
+			</div>
 		</div>
-	</form>
-</div>
-<script defer src="js/main.js"></script>
+
+		<div class="form__svg">
+			<svg width="307" height="355" viewBox="-6 -12 307 355" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path stroke-width="6" stroke-linecap="round" fill-rule="evenodd" clip-rule="evenodd"
+							d="M205.5 411C92.236 411 0 318.764 0 205.5C0 92.236 92.236 0 205.5 0C318.764 0 411 92.236 411 205.5C411 271.362 379.812 330.113 331.438 367.754C333.781 365.394 335.295 362.201 335.521 358.578C336 354.751 336 351.881 336 348.533V343.749C335.879 337.683 335.35 331.725 334.44 325.901C363.927 294.343 382 251.99 382 205.5C382 108.186 302.814 29 205.5 29C108.186 29 29 108.186 29 205.5C29 252.377 47.3746 295.047 77.2988 326.686C76.282 333.801 75.8485 341.1 76.0469 348.533C76.0469 351.403 76.0469 354.751 76.5256 358.578C77.0044 366.71 83.7067 372.451 91.8452 371.972C99.9836 371.494 105.728 364.797 105.25 356.665C104.892 354.163 104.802 352.196 104.779 350.363C133.361 370.298 168.091 382 205.5 382C243.357 382 278.471 370.016 307.247 349.643C307.207 350.468 307.131 351.336 307.053 352.232C306.928 353.664 306.797 355.164 306.797 356.665C306.318 364.318 312.063 371.494 320.202 371.972H321.159C323.791 371.972 326.253 371.294 328.371 370.094C294.07 395.773 251.521 411 205.5 411ZM307.247 349.643C317.103 342.665 326.215 334.703 334.44 325.901C324.506 262.367 269.17 214.712 203.39 216.027C138.589 217.313 86.0983 265.111 77.2988 326.686C85.6155 335.48 94.8243 343.421 104.779 350.363C104.771 349.743 104.771 349.138 104.771 348.533V344.227C105.728 288.259 152.166 243.771 208.178 245.207C264.19 246.163 308.712 292.564 307.276 348.533C307.276 348.892 307.265 349.263 307.247 349.643ZM328.371 370.094C329.401 369.324 330.423 368.543 331.438 367.754C330.531 368.667 329.5 369.455 328.371 370.094ZM147 142.5C147 174.339 172.661 200 204.5 200C236.339 200 262 174.339 262 142.5C262 110.661 236.339 85 204.5 85C172.661 85 147 110.661 147 142.5ZM205.5 114C189.057 114 176 127.057 176 143.5C176 159.943 189.057 173 205.5 173C221.943 173 235 159.943 235 143.5C235 127.057 221.943 114 205.5 114Z"
+				/>
+			</svg>
+		</div>
+
+	</div>
+</form>
+<script src="js/main.js"></script>
 </body>
 </html>

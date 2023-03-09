@@ -43,9 +43,34 @@ const submitInput = document.querySelector('input[value="Complete Signup"]')
 const form = document.querySelector('form');
 submitInput.addEventListener('click', () => {
 	if (submitInput.classList.contains('invalid')) {
-		submitInput.classList.toggle('invalid');
+		submitInput.classList.remove('invalid');
 	}
 	if (!form.reportValidity()) {
-		submitInput.classList.toggle('invalid')
+		submitInput.classList.add('invalid')
 	}
-}, false);
+});
+
+const errorDiv = document.querySelector('#error');
+
+form.addEventListener('submit', async (ev) => {
+	ev.preventDefault();
+	const mocks = ['/mock/server-ok.json', '/mock/server-error.json'];
+	const currentMock = mocks[~~(Math.random() * 2)];
+	const result = await fetch(currentMock).then((response) => response.json());
+	if (result.response === 'ok') {
+		form.reset();
+		if (errorDiv.classList.contains('error')) {
+			errorDiv.classList.remove('error');
+		}
+		console.log('ok');
+	} else if (result.response === 'error') {
+		if (errorDiv.classList.contains('error')) {
+			submitInput.classList.remove('invalid');
+			errorDiv.classList.remove('error');
+		}
+
+		submitInput.classList.add('invalid');
+		errorDiv.classList.add('error');
+		console.log('error');
+	}
+})
