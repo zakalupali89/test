@@ -92,37 +92,37 @@ body {
 	animation-fill-mode: forwards;
 }
 
-.form__input-animation_delay_300 {
+.form__input-animation_delay_100 {
 	animation-delay: 0.1s;
 	top: 380px;
 }
 
-.form__input-animation_delay_600 {
+.form__input-animation_delay_200 {
 	animation-delay: 0.2s;
 	top: 370px;
 }
 
-.form__input-animation_delay_900 {
+.form__input-animation_delay_300 {
 	animation-delay: 0.3s;
 	top: 370px;
 }
 
-.form__input-animation_delay_1200 {
+.form__input-animation_delay_400 {
 	animation-delay: 0.4s;
 	top: 350px;
 }
 
-.form__input-animation_delay_1500 {
+.form__input-animation_delay_500 {
 	animation-delay: 0.5s;
 	top: 350px;
 }
 
-.form__input-animation_delay_1800 {
+.form__input-animation_delay_600 {
 	animation-delay: 0.6s;
 	top: 340px;
 }
 
-.form__input-animation_delay_2100 {
+.form__input-animation_delay_700 {
 	animation-delay: 0.7s;
 	top: 340px;
 }

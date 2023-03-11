@@ -1,0 +1,26 @@
+@import "../../index";
+
+.radio {
+	cursor: pointer;
+	margin: 0 6px 0 0;
+	box-sizing: content-box;
+	appearance: none;
+	-webkit-appearance: none;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	border: 3px solid #FFF;
+	box-shadow: 0 0 0 1px #5A61ED;
+}
+
+.radio:checked {
+	background: #5A61ED;
+}
+
+.label {
+	cursor: pointer;
+	letter-spacing: -0.1px;
+	font-size: 14px;
+	line-height: 16px;
+	color: $colorText;
+}

@@ -1,0 +1,17 @@
+.formSvg {
+	max-width: 411px;
+
+	stroke: rgba(90, 97, 237, 0.2);
+	stroke-dasharray: 2800;
+
+	&:global(.animated){
+		stroke-dashoffset: 2800;
+		animation: svg 2s linear infinite;
+	}
+}
+
+@keyframes svg {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
